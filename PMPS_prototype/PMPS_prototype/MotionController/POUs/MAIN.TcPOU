@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+  <POU Name="MAIN" Id="{ee27c5ec-ece1-4706-a959-f409661eea2d}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	Counter0Inc : DWORD := 1;
+	Counter0Read : DWORD; 
+	Counter0 : count_mgr_test;
+	Encoder0Read : ULINT;
+	Encoder0	:	ST_BisscEncoder;
+	EncoderDemand0 : ST_BeamDemand;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Counter0(Increment:=Counter0Inc);
+Counter0Read := Counter0.CurrentOut;
+EncoderDemand0 := BisscEvaluator(Encoder0);]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="12" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

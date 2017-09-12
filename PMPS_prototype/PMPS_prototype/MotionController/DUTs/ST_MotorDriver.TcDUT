@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+  <DUT Name="ST_MotorDriver" Id="{9eeb5d15-e3ba-4e08-bfee-b8c8500aa911}">
+    <Declaration><![CDATA[TYPE ST_MotorDriver :
+STRUCT
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

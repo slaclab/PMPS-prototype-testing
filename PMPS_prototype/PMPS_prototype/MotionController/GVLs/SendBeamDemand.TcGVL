@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+  <GVL Name="SendBeamDemand" Id="{0b692326-3f6d-408c-8bae-4b50dd70b5a6}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	// What beam rate is required from a device? (Probably units of frequency) 
+	beamRate	AT %Q*	: LREAL;
+	// Demand specifies if this demand is an emergency (True). Non-Demand is for non-emergencies/Preemtive protection (synonomous). Sent to Hutch PLC.
+	// demand : BOOL;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

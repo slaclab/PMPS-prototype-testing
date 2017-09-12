@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+  <DUT Name="ST_BisscEncoder" Id="{d6741fc3-4b84-42a5-970c-2bb15822fa78}">
+    <Declaration><![CDATA[TYPE ST_BisscEncoder :
+STRUCT
+	// Inclusive limits on encoder position (checks for values exceeding this inclusive range)
+	// These values are just guesses - no units yet - no actual data - CHANGE BEFORE USE
+	ncLLimit :	ULINT := 0;
+	ncULimit :	ULINT := 100;
+	// Readback for linear encoder's position
+	encLoc	AT %I*	:	ULINT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+  <DUT Name="ST_BeamDemand" Id="{71235d72-39ee-4b96-9fca-099014e01537}">
+    <Declaration><![CDATA[TYPE ST_BeamDemand :
+STRUCT
+	// What beam rate is required from a device? (Probably units of frequency) 
+	beamRate : LREAL;
+	// Demand specifies if this demand is an emergency (True). Non-Demand is for non-emergencies
+	demand : BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1880,6 +1880,7 @@ External Setpoint Generation:
 	</Project>
 	<Mappings>
 		<MappingInfo Identifier="{00000000-0010-0304-3000-040310000403}" Id="#x02030010"/>
+		<MappingInfo Identifier="{00000000-0011-0101-1000-010160000403}" Id="#x02030020"/>
 		<OwnerA Name="TINC^NC-Task 1 SAF^Axes^Axis 2">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL7041)">
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Error" Size="1" OffsA="3"/>

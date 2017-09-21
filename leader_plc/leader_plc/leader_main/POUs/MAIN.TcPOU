@@ -9,6 +9,14 @@ VAR
 	//Encoder0Read : ULINT;
 	Encoder0	:	ST_BisscEncoder;
 	EncoderDemand0 : ST_BeamDemand;
+	Stepper0	:	ST_Stepper;
+	
+	fbPower	:	MC_Power;
+	fbJog	:	MC_Jog;
+	fbHome	:	MC_Home;
+	fbReadStatus	:	MC_ReadStatus;
+	fbMoveAbsolute	:	MC_MoveAbsolute;
+	
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[//set constants
@@ -17,13 +25,17 @@ Encoder0.ncULimit := 170;
 //runtime
 Counter0(Increment:=Counter0Inc);
 Counter0Read := Counter0.CurrentOut;
-EncoderDemand0 := FUN_BisscEvaluator(Encoder0);]]></ST>
+EncoderDemand0 := FUN_BisscEvaluator(Encoder0);
+
+fbPower(Axis:=Stepper0.Axis,Enable:=True,Enable_Positive:=True,Enable_Negative:=True,Override:=100);]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="21" Count="2" />
       <LineId Id="20" Count="0" />
       <LineId Id="19" Count="0" />
       <LineId Id="15" Count="0" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="43" Count="0" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>

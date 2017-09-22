@@ -37,7 +37,9 @@ fbPower(Axis:=Stepper0.Axis,Enable:=TRUE,Enable_Positive:=Stepper0EnbP,Enable_Ne
 
 //fbHome(Axis:=Stepper0.Axis,Execute:=TRUE,Position:=4.0,HomingMode:=MC_HomingMode.MC_DefaultHoming);
 
-fbMoveAbsolute(Axis:=Stepper0.Axis,Position:=50.0);
+IF fbPower.Status THEN
+	fbMoveAbsolute(Axis:=Stepper0.Axis,Velocity:=1);
+END_IF
 
 //fbMoveRelative(Axis:=Stepper0.Axis,Execute:=TRUE,Distance:=1);
 (*
@@ -74,8 +76,10 @@ fbMoveRelative(
       <LineId Id="60" Count="0" />
       <LineId Id="66" Count="0" />
       <LineId Id="68" Count="0" />
-      <LineId Id="74" Count="0" />
-      <LineId Id="76" Count="0" />
+      <LineId Id="164" Count="0" />
+      <LineId Id="163" Count="0" />
+      <LineId Id="162" Count="0" />
+      <LineId Id="165" Count="0" />
       <LineId Id="85" Count="0" />
       <LineId Id="103" Count="0" />
       <LineId Id="136" Count="0" />

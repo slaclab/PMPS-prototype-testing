@@ -38,7 +38,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000004}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..3] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000004}" IecBaseType="true" HideSubItems="true">ARRAY [0..3] OF BIT</Name>
 			<BitSize>4</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -47,7 +47,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000005}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..4] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000005}" IecBaseType="true" HideSubItems="true">ARRAY [0..4] OF BIT</Name>
 			<BitSize>5</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -120,9 +120,6 @@
 		</AddressInfo>
 		<Image Id="1" AddrType="9" ImageType="3">
 			<Name>Image</Name>
-		</Image>
-		<Image Id="6" AddrType="10" ImageType="3">
-			<Name>Image-2</Name>
 		</Image>
 		<Box BoxType="9099" Id="1">
 			<Name>Term 1 (EK1200)</Name>
@@ -517,18 +514,20 @@
 			<Box BoxType="9099" Id="3">
 				<Name>Term 3 (EL5042)</Name>
 				<ImageId>1002</ImageId>
-				<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x13b23052" RevisionNo="#x00100000" InfoDataAddr="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL5042 2K. BiSS-C Encoder" Desc="EL5042" PortABoxInfo="#x01000002">
-					<SyncMan>001080002600010001000000000000008000001026010000</SyncMan>
-					<SyncMan>801080002200010002000000000000008000801022010000</SyncMan>
+				<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x13b23052" RevisionNo="#x00100000" InfoDataAddr="true" TimeoutMailbox2="10000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL5042 2Ch. BiSS-C Encoder" Desc="EL5042" PortABoxInfo="#x01000002">
+					<SyncMan>001080002600010001000000400080008000001026010000</SyncMan>
+					<SyncMan>801080002200010002000000400080008000801022010000</SyncMan>
 					<SyncMan>001100000400000003000000000000000000001104000000</SyncMan>
 					<SyncMan>801114002000010004000000000000001400801120010000</SyncMan>
 					<Fmmu>0000000000000000801100010100000002000000000000000000000000000000</Fmmu>
 					<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
 					<BootStrapData>0010f400f410f400</BootStrapData>
-					<DcMode>53796e6368726f6e000000000000000053796e6368726f6e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
-					<DcMode>44430000000000000000000000000000444300000000000000000000000000000000000000000000000000000000000000000000d08affff00000000000000030100000000000000000000000000000000000000000000000000000000000000</DcMode>
-					<DcMode>4443494e0000000000000000000000004443494e00000000000000000000000000000000000000000000000000000000000000001802ffff00000000000000030100000000000000000000000000000000000000000000000000000000000000</DcMode>
+					<DcMode>53796e6368726f6e00000000000000004672656552756e2f534d2d53796e6368726f6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
+					<DcMode>4443000000000000000000000000000044432d53796e6368726f6e000000000000000000000000000000000000000000000000000000000000000000000000030100000000000000000000000000000000000000000000000000000000000000</DcMode>
+					<DcMode>4443494e00000000000000000000000044432d53796e6368726f6e2028696e7075742062617365642900000000000000000000000000000000000000000000030100000000000000000001000000000000000000000000000000000000000000</DcMode>
+					<MBoxUserCmdData>004003000a00000000000000030010000000000000000000000000000000000020f3100502000000010000</MBoxUserCmdData>
 					<Pdo Name="FB Inputs Channel 1" Index="#x1a00" Flags="#x0010" SyncMan="3">
+						<ExcludePdo>#x1a02</ExcludePdo>
 						<Entry Name="Status__Warning" Index="#x6000" Sub="#x01">
 							<Type>BIT</Type>
 						</Entry>
@@ -558,6 +557,7 @@
 						</Entry>
 					</Pdo>
 					<Pdo Name="FB Inputs Channel 2" Index="#x1a01" Flags="#x0010" SyncMan="3">
+						<ExcludePdo>#x1a03</ExcludePdo>
 						<Entry Name="Status__Warning" Index="#x6010" Sub="#x01">
 							<Type>BIT</Type>
 						</Entry>
@@ -587,6 +587,7 @@
 						</Entry>
 					</Pdo>
 					<Pdo Name="FB Inputs Channel 1 compact" Index="#x1a02" Flags="#x0010">
+						<ExcludePdo>#x1a00</ExcludePdo>
 						<Entry Name="Status__Warning" Index="#x6000" Sub="#x01">
 							<Type>BIT</Type>
 						</Entry>
@@ -616,6 +617,7 @@
 						</Entry>
 					</Pdo>
 					<Pdo Name="FB Inputs Channel 2 compact" Index="#x1a03" Flags="#x0010">
+						<ExcludePdo>#x1a01</ExcludePdo>
 						<Entry Name="Status__Warning" Index="#x6010" Sub="#x01">
 							<Type>BIT</Type>
 						</Entry>
@@ -644,6 +646,8 @@
 							<Type>UDINT</Type>
 						</Entry>
 					</Pdo>
+					<CoeProfile ProfileNo="33624969"/>
+					<CoeProfile ProfileNo="33624969"/>
 				</EtherCAT>
 			</Box>
 			<Box BoxType="9099" Id="4">

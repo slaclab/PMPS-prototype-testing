@@ -983,10 +983,6 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 3 (EL5042)">
 				<Link VarA="PlcTask Inputs^MAIN.Encoder0.encLoc" VarB="FB Inputs Channel 1^Position"/>
 			</OwnerB>
-			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^Axis 2">
-				<Link VarA="PlcTask Inputs^MAIN.Stepper0.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
-				<Link VarA="PlcTask Outputs^MAIN.Stepper0.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
-			</OwnerB>
 		</OwnerA>
 	</Mappings>
 </TcSmItem>

@@ -256,7 +256,7 @@
 						</Entry>
 					</Pdo>
 					<Pdo Name="STM Status" Index="#x1a03" Flags="#x0010" SyncMan="3">
-						<Entry Name="Status__Ready to enable" Index="#x6010" Sub="#x01">
+						<Entry Name="Status__Ready to enable" Index="#x6010" Sub="#x01" Flags="#x00000020">
 							<Type>BIT</Type>
 						</Entry>
 						<Entry Name="Status__Ready" Index="#x6010" Sub="#x02">

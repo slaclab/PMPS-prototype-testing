@@ -10,12 +10,15 @@ VAR
 	Encoder0	:	ST_BisscEncoder;
 	EncoderDemand0 : ST_BeamDemand;
 	Stepper0	:	ST_Stepper;
+	Stepper0EnbP	:	BOOL;
+	Stepper0EnbN	:	BOOL;
 	
 	fbPower	:	MC_Power;
-	fbJog	:	MC_Jog;
+	//fbJog	:	MC_Jog;
 	fbHome	:	MC_Home;
-	fbReadStatus	:	MC_ReadStatus;
+	//fbReadStatus	:	MC_ReadStatus;
 	fbMoveAbsolute	:	MC_MoveAbsolute;
+	fbMoveRelative	:	MC_MoveRelative;
 	
 END_VAR]]></Declaration>
     <Implementation>
@@ -27,7 +30,36 @@ Counter0(Increment:=Counter0Inc);
 Counter0Read := Counter0.CurrentOut;
 EncoderDemand0 := FUN_BisscEvaluator(Encoder0);
 
-fbPower(Axis:=Stepper0.Axis,Enable:=True,Enable_Positive:=True,Enable_Negative:=True,Override:=100);]]></ST>
+Stepper0EnbP := Encoder0.encLoc < 1099600;
+Stepper0EnbN := Encoder0.encLoc > 460000;
+
+fbPower(Axis:=Stepper0.Axis,Enable:=TRUE,Enable_Positive:=Stepper0EnbP,Enable_Negative:=Stepper0EnbN,Override:=100);
+
+//fbHome(Axis:=Stepper0.Axis,Execute:=TRUE,Position:=4.0,HomingMode:=MC_HomingMode.MC_DefaultHoming);
+
+fbMoveAbsolute(Axis:=Stepper0.Axis,Position:=50.0);
+
+//fbMoveRelative(Axis:=Stepper0.Axis,Execute:=TRUE,Distance:=1);
+(*
+fbMoveRelative(
+	Axis:= , 
+	Execute:= , 
+	Distance:= , 
+	Velocity:= , 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:= , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+*)
+
+]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="21" Count="2" />
@@ -35,7 +67,21 @@ fbPower(Axis:=Stepper0.Axis,Enable:=True,Enable_Positive:=True,Enable_Negative:=
       <LineId Id="19" Count="0" />
       <LineId Id="15" Count="0" />
       <LineId Id="40" Count="0" />
+      <LineId Id="156" Count="0" />
+      <LineId Id="159" Count="0" />
+      <LineId Id="158" Count="0" />
       <LineId Id="43" Count="0" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="66" Count="0" />
+      <LineId Id="68" Count="0" />
+      <LineId Id="74" Count="0" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="103" Count="0" />
+      <LineId Id="136" Count="0" />
+      <LineId Id="104" Count="14" />
+      <LineId Id="64" Count="0" />
+      <LineId Id="61" Count="1" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>

@@ -9,11 +9,11 @@
 				<DeviceData>0001052d069b</DeviceData>
 			</Pnp>
 		</AddressInfo>
-		<Image Id="4" AddrType="9" ImageType="3">
+		<Image Id="5" AddrType="9" ImageType="3">
 			<Name>Image</Name>
 		</Image>
-		<Box BoxType="9099" Id="6">
-			<Name>Box 6 (P00030924 R00010420)</Name>
+		<Box BoxType="9099" Id="7">
+			<Name>Box 7 (P00030924 R00010420)</Name>
 			<ImageId>65</ImageId>
 			<EtherCAT SlaveType="2" PdiType="#x0c05" CycleMBoxPolling="true" CoeType="1" EoeType="1" FoeType="1" VendorId="#x0000009a" ProductCode="#x00030924" RevisionNo="#x00010420" SerialNo="#x01045544" InfoDataAddr="true" PortPhys="17" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="" Desc="P00030924 R00010420" PortABoxInfo="#x00ffffff">
 				<SyncMan>00188c002600010001000000000000008c00001826010000</SyncMan>

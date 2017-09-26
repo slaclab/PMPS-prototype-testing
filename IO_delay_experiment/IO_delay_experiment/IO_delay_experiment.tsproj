@@ -1385,6 +1385,10 @@ External Setpoint Generation:
 	</DataTypes>
 	<Project ProjectGUID="{DC6B027D-DC6F-4458-B4AB-62A3B020D126}" TargetNetId="5.45.6.154.1.1" ShowHideConfigurations="#x106">
 		<System>
+			<Settings>
+				<Cpu BaseTime="1000"/>
+				<IoIdleTask CycleTime="5000"/>
+			</Settings>
 			<Tasks>
 				<Task Id="2" Priority="20" CycleTime="100000" AmsPort="350">
 					<Name>PlcTask</Name>
@@ -1649,6 +1653,7 @@ External Setpoint Generation:
 		</Io>
 	</Project>
 	<Mappings>
+		<MappingInfo Identifier="{00000000-0011-0101-1000-010110000403}" Id="#x02030010"/>
 		<OwnerA Name="TINC^NC-Task 1 SAF^Axes^Axis 1">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL7041)">
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Error" Size="1" OffsA="3"/>

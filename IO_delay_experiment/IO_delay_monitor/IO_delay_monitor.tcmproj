@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{ee4189e6-988c-4862-8203-3ec89ba12e61}</ProjectGuid>
+    <AssemblyName>IO_delay_monitor</AssemblyName>
+    <Name>IO_delay_monitor</Name>
+    <RootNamespace>IO_delay_monitor</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Scope YT Project.tcscope">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

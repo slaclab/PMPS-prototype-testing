@@ -36,11 +36,13 @@ Counter0(Increment:=Counter0Inc);
 Counter0Read := Counter0.CurrentOut;
 EncoderDemand0 := FUN_BisscEvaluator(Encoder0);
 
+StepperMode := 1;
 
 StepperAxis.stAxis := Stepper0.Axis;
 StepperAxis.wMode := StepperMode;
 StepperAxis.eState := StepperState;
 
+StepperControl(iq_Axis := StepperAxis);
 
 
 
@@ -64,9 +66,13 @@ END_IF
       <LineId Id="15" Count="0" />
       <LineId Id="40" Count="0" />
       <LineId Id="199" Count="0" />
+      <LineId Id="205" Count="0" />
       <LineId Id="186" Count="0" />
       <LineId Id="193" Count="0" />
-      <LineId Id="201" Count="3" />
+      <LineId Id="201" Count="0" />
+      <LineId Id="209" Count="0" />
+      <LineId Id="208" Count="0" />
+      <LineId Id="203" Count="1" />
       <LineId Id="197" Count="0" />
       <LineId Id="187" Count="0" />
       <LineId Id="156" Count="0" />

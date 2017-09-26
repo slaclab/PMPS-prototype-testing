@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+  <DUT Name="DigitalInput" Id="{70ec0247-08c7-4ced-a9d0-1a0f195436d8}">
+    <Declaration><![CDATA[TYPE DigitalInput :
+STRUCT
+	in AT %I*	:	BIT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

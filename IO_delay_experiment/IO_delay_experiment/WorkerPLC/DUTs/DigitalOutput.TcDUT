@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+  <DUT Name="DigitalOutput" Id="{6beff22a-6e2b-4f6a-a73e-0dc30b7f7e36}">
+    <Declaration><![CDATA[TYPE DigitalOutput :
+STRUCT
+	out AT %Q*	:	BIT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

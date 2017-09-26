@@ -4,6 +4,8 @@
     <Declaration><![CDATA[TYPE ST_Stepper :
 STRUCT
 	Axis	:	AXIS_REF;
+	llimit	:	ULINT	:=	460000;
+	ulimit	:	ULINT	:=	1099600;
 END_STRUCT
 END_TYPE
 ]]></Declaration>

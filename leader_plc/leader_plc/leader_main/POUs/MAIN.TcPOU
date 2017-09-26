@@ -13,10 +13,16 @@ VAR
 	Stepper0EnbP	:	BOOL;
 	Stepper0EnbN	:	BOOL;
 	
+	StepperAxis	:	ST_BasicAxis;
+	StepperControl	:	FB_BasicAxisControl;
+	StepperMode	:	E_AxisMoveMode;
+	StepperState	:	E_AxisMotionState;
+	
 	fbPower	:	MC_Power;
 	//fbJog	:	MC_Jog;
 	fbHome	:	MC_Home;
 	//fbReadStatus	:	MC_ReadStatus;
+	
 	fbMoveAbsolute	:	MC_MoveAbsolute;
 	fbMoveRelative	:	MC_MoveRelative;
 	
@@ -30,35 +36,23 @@ Counter0(Increment:=Counter0Inc);
 Counter0Read := Counter0.CurrentOut;
 EncoderDemand0 := FUN_BisscEvaluator(Encoder0);
 
-Stepper0EnbP := Encoder0.encLoc < 1099600;
-Stepper0EnbN := Encoder0.encLoc > 460000;
+
+StepperAxis.stAxis := Stepper0.Axis;
+StepperAxis.wMode := StepperMode;
+StepperAxis.eState := StepperState;
+
+
+
+
+(*
+Stepper0EnbP := Encoder0.encLoc < Stepper0.ulimit;
+Stepper0EnbN := Encoder0.encLoc > Stepper0.llimit;
 
 fbPower(Axis:=Stepper0.Axis,Enable:=TRUE,Enable_Positive:=Stepper0EnbP,Enable_Negative:=Stepper0EnbN,Override:=100);
-
-//fbHome(Axis:=Stepper0.Axis,Execute:=TRUE,Position:=4.0,HomingMode:=MC_HomingMode.MC_DefaultHoming);
-
 IF fbPower.Status THEN
 	fbMoveAbsolute(Axis:=Stepper0.Axis,Velocity:=1);
 END_IF
 
-//fbMoveRelative(Axis:=Stepper0.Axis,Execute:=TRUE,Distance:=1);
-(*
-fbMoveRelative(
-	Axis:= , 
-	Execute:= , 
-	Distance:= , 
-	Velocity:= , 
-	Acceleration:= , 
-	Deceleration:= , 
-	Jerk:= , 
-	BufferMode:= , 
-	Options:= , 
-	Done=> , 
-	Busy=> , 
-	Active=> , 
-	CommandAborted=> , 
-	Error=> , 
-	ErrorID=> );
 *)
 
 ]]></ST>
@@ -69,23 +63,23 @@ fbMoveRelative(
       <LineId Id="19" Count="0" />
       <LineId Id="15" Count="0" />
       <LineId Id="40" Count="0" />
+      <LineId Id="199" Count="0" />
+      <LineId Id="186" Count="0" />
+      <LineId Id="193" Count="0" />
+      <LineId Id="201" Count="3" />
+      <LineId Id="197" Count="0" />
+      <LineId Id="187" Count="0" />
       <LineId Id="156" Count="0" />
       <LineId Id="159" Count="0" />
       <LineId Id="158" Count="0" />
       <LineId Id="43" Count="0" />
-      <LineId Id="60" Count="0" />
-      <LineId Id="66" Count="0" />
-      <LineId Id="68" Count="0" />
       <LineId Id="164" Count="0" />
       <LineId Id="163" Count="0" />
       <LineId Id="162" Count="0" />
       <LineId Id="165" Count="0" />
       <LineId Id="85" Count="0" />
       <LineId Id="103" Count="0" />
-      <LineId Id="136" Count="0" />
-      <LineId Id="104" Count="14" />
-      <LineId Id="64" Count="0" />
-      <LineId Id="61" Count="1" />
+      <LineId Id="62" Count="0" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>

@@ -119,9 +119,16 @@ ClientBin/
 *.publishsettings
 
 #Twincat specifics
-*~u
-_CompileInfo
+*.~u
+#_CompileInfo
 *.compileinfo
+_*
+#*.tpy
+*.bak
+
+#.tmc
+
+
 
 # RIA/Silverlight projects
 Generated_Code/

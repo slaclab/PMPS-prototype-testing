@@ -34,6 +34,12 @@
     <Compile Include="POUs\count_mgr_test.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\FB_MotorRepeater.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\FB_StepperWrapper.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\FUN_BisscEvaluator.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -48,6 +54,10 @@
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderReference Include="LCLS Motion Control">
+      <DefaultResolution>LCLS Motion Control, * (SLAC)</DefaultResolution>
+      <Namespace>LCLS_Motion_Control</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="Tc2_MC2">
       <DefaultResolution>Tc2_MC2, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_MC2</Namespace>
@@ -69,6 +79,14 @@
     <None Include="leader_main.tmc">
       <SubType>Content</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PlaceholderResolution Include="LCLS General">
+      <Resolution>LCLS General, 0.1.1 (SLAC)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="LCLS Motion Control">
+      <Resolution>LCLS Motion Control, * (SLAC)</Resolution>
+    </PlaceholderResolution>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>

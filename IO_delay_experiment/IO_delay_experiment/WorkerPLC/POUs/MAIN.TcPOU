@@ -7,12 +7,46 @@ VAR
 	input	:	DigitalInput;
 	output	:	DigitalOutput;
 	term	:	DigitalInput;
+	counter	:	UINT	:=	0;
+	c_limit	:	UINT 	:= 100;
+	s_limit	:	UINT	:=90;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[
+IF counter < c_limit THEN
+	counter := counter + 1;
+ELSIF counter >= c_limit THEN
+	counter := 0;
+END_IF;
+
+IF counter > s_limit THEN
+	starter.out := 1;
+ELSE
+	starter.out := 0;
+END_IF
+
+IF input.in THEN
+	output.out := 1;
+ELSE
+	output.out := 0;
+END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
+      <LineId Id="18" Count="1" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="37" Count="1" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="28" Count="1" />
+      <LineId Id="39" Count="1" />
+      <LineId Id="30" Count="0" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+  <POU Name="iterator" Id="{f811f75d-3bc1-47ae-8e78-e15fbc0722ce}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK iterator
+VAR_INPUT
+	increment	:	DINT;
+END_VAR
+VAR_OUTPUT
+	out	:	DINT;
+END_VAR
+VAR
+	value	:	DINT	:=0;
+	lim	:	DINT :=1000;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF value < lim THEN
+	value := value + increment;
+ELSE
+	value:= 0;	
+END_IF
+out := value; ]]></ST>
+    </Implementation>
+    <LineIds Name="iterator">
+      <LineId Id="19" Count="0" />
+      <LineId Id="21" Count="1" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

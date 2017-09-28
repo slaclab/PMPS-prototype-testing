@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+  <POU Name="MAIN" Id="{e0313068-1eb6-4e3d-8bcd-3e27c74f9e5d}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR CONSTANT
+END_VAR
+VAR
+	ulimit	:	DINT	:=	1000;
+	delay	:	DINT	:=	50;
+	assign	:	BOOL	:=	FALSE;
+	(**********************)
+	arr	:	ARRAY	[0..20000]	OF	iterator;
+	cache	:	ARRAY	[0..20000]	OF	DINT;
+	noToTest	:	DINT	:= 0;
+	count	: DINT	:=0;
+	I	:	DINT;
+	step	:	BOOL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+IF count < delay-1 THEN
+	count := count + 1;
+	step :=	FALSE;
+ELSE
+	count := 0;
+	step :=	TRUE;
+END_IF
+
+IF step THEN
+	IF noToTest < ulimit-1 THEN
+		noToTest := noToTest + 1;
+	ELSE
+		noToTest := 0;
+	END_IF
+END_IF
+// Run noToTest operations
+FOR I:=0 TO noToTest BY 1 DO 
+	arr[I](increment:=1);
+	IF ASSIGN THEN
+		cache[I] := arr[i].out;
+	END_IF
+END_FOR;]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="55" Count="0" />
+      <LineId Id="58" Count="0" />
+      <LineId Id="68" Count="0" />
+      <LineId Id="71" Count="0" />
+      <LineId Id="75" Count="0" />
+      <LineId Id="72" Count="1" />
+      <LineId Id="60" Count="1" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="24" Count="1" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="64" Count="1" />
+      <LineId Id="39" Count="1" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="49" Count="0" />
+      <LineId Id="80" Count="0" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

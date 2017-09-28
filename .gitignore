@@ -123,8 +123,11 @@ ClientBin/
 #_CompileInfo
 *.compileinfo
 _*
-#*.tpy
+*.tpy
 *.bak
+
+
+
 
 #.tmc
 

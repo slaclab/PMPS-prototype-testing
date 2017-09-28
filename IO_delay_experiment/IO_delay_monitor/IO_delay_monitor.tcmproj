@@ -7,7 +7,7 @@
     <RootNamespace>IO_delay_monitor</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Scope YT Project.tcscope">
+    <Content Include="Delay_mon.tcscope">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

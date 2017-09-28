@@ -1,6 +1,8 @@
 # IO_delay experiment
-
 This project tests the response rate of the of a Beckhoff system. This setup awaits a high starter signal and responds with a high output signal. Starter signal produced by terminal on Beckhoff system. Data taken via external oscilloscope.
+
+## Goal
+Attempt to produce minimum delay for basic IO operations. Measure baseline performance provided from optimal settings.
 
 ## Required components 
 - EL1124

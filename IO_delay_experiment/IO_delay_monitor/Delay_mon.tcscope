@@ -16,7 +16,7 @@
   &lt;/DocumentContainer&gt;
 &lt;/Layout&gt;</LayoutString>
   <Operating>
-    <RecordTime>6000000000</RecordTime>
+    <RecordTime>600000000</RecordTime>
     <DataFileName>C:\temp</DataFileName>
     <RunMode>ClientStart</RunMode>
     <StopMode>AutoStop</StopMode>
@@ -39,7 +39,7 @@
         <BorderColorValue>-1973016</BorderColorValue>
         <IsSmooth>false</IsSmooth>
         <SmoothTime>100</SmoothTime>
-        <YZoom>false</YZoom>
+        <YZoom>true</YZoom>
         <StackedYAxes>false</StackedYAxes>
         <Legend>false</Legend>
         <VisibleToolstrip>true</VisibleToolstrip>
@@ -119,7 +119,7 @@
                 <FileHandle>0</FileHandle>
                 <UseLocalServer>true</UseLocalServer>
                 <AmsNetIdString>5.45.6.154.1.1</AmsNetIdString>
-                <SampleTime>100000</SampleTime>
+                <SampleTime>500</SampleTime>
                 <Disabled>false</Disabled>
                 <Oversample>0</Oversample>
                 <UseTaskSampletime>true</UseTaskSampletime>
@@ -188,7 +188,7 @@
                 <FileHandle>0</FileHandle>
                 <UseLocalServer>true</UseLocalServer>
                 <AmsNetIdString>5.45.6.154.1.1</AmsNetIdString>
-                <SampleTime>100000</SampleTime>
+                <SampleTime>500</SampleTime>
                 <Disabled>false</Disabled>
                 <Oversample>0</Oversample>
                 <UseTaskSampletime>true</UseTaskSampletime>
@@ -257,7 +257,7 @@
                 <FileHandle>0</FileHandle>
                 <UseLocalServer>true</UseLocalServer>
                 <AmsNetIdString>5.45.6.154.1.1</AmsNetIdString>
-                <SampleTime>100000</SampleTime>
+                <SampleTime>500</SampleTime>
                 <Disabled>false</Disabled>
                 <Oversample>0</Oversample>
                 <UseTaskSampletime>true</UseTaskSampletime>
@@ -326,7 +326,7 @@
         <HexValues>false</HexValues>
       </CursorModule>
       <Operating>
-        <DisplayWidth>100000000</DisplayWidth>
+        <DisplayWidth>1600</DisplayWidth>
       </Operating>
       <ChartType>XT</ChartType>
       <SortPriority>-1</SortPriority>

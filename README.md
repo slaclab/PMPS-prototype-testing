@@ -20,19 +20,21 @@ Objective of experiment
 bulleted list
 
 ## Test with date, name optional
-### Components in order, left to right
-ordered list of beckhoff components
+
+### Intro (optional)
+Describe goal of specific test if necessary
 
 ### Setup
 Non-beckhoff setup including measuring tools. 
 
-### Observed
-Observed results
-
-### Notes
-Additional observations.
+#### Components in order, left to right
+ordered list of beckhoff components
 
 ### Results
-Short answer to goal/question
+Observed results
+
+### Discussion
+Conclusion and notes.
+
 ```
 

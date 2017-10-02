@@ -8,7 +8,10 @@ Find the relationship between various software operations and exetuaion time. Op
 - CX2020
 
 ## Preliminary Test on 9-28-17
-### Components in order, left to right
+### setup
+Observed using TC's Real-Time's RealtimeUsage, the Task's Online plots and the excess counter. 
+
+#### Components in order, left to right
 0. CX2020
 0. EL7041 (unused)
 0. EL9186 (unused)
@@ -17,12 +20,11 @@ Find the relationship between various software operations and exetuaion time. Op
 0. EL2124 (unused)
 0. EL1124 (unused)
 
-### Setup
-Observed using TC's Real-Time's RealtimeUsage, the Task's Online plots and the excess counter. 
-
-### Observed
-Operation time appears to scale linearly with number of mathematical operations. Sawtooth pattern clearly visible. 1000 operations reliably produced no excess counts. At roughly 1700 and greater operations, excesses were numerous and reliable. Relationship appears linear.
-
-### Notes
 
 ### Results
+Operation time appears to scale linearly with number of mathematical operations. Sawtooth pattern clearly visible. 1000 operations reliably produced no excess counts. At roughly 1700 and greater operations, excesses were numerous and reliable. Relationship appears linear. Odd geometry of plots noticed in Real Time Usage and plcTask plots during and around excesses. 
+
+### Discussion
+
+
+

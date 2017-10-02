@@ -15,6 +15,8 @@ VAR
 	count	: DINT	:=0;
 	I	:	DINT;
 	step	:	BOOL;
+	
+
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[

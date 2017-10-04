@@ -61,7 +61,7 @@ Measure using Tektronix 784D oscilloscope. Mean and standard dev. taken over 512
 Unchanged
 
 ### Results
-mean = 100.4us delay, st. dev = 2.29 ns, min = 85.9us, max = 119.4us.
+mean = 100.4us delay, st. dev = 2.29 us, min = 85.9us, max = 119.4us.
 
 ### Discussion
 Min and max indicate that the beckhoff is not taking additional/fewer cycles to complete computation. Cycle ount appears to be reliable.

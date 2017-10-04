@@ -9,7 +9,7 @@ Individual tests are sectioned off into separate directories. Each contains the 
 
 ## Documenting results 
 Each test directory's README.md will have at minimum:
-```
+```markdown
 # IO_delay experiment
 Short intro
 

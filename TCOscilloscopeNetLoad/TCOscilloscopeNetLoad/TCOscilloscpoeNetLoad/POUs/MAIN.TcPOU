@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+  <POU Name="MAIN" Id="{419c2959-059c-4440-b336-d464dc2cfbdb}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	// CPU Manipulator
+;
+	cpu_enb	:	BOOL	:=	TRUE;
+	noToTest	:	DINT	:= 100;
+	ulimit	:	DINT	:=	1000;
+	delay	:	DINT	:=	50;
+	assign	:	BOOL	:=	FALSE;
+	(**********************)
+	arr	:	ARRAY	[0..1000]	OF	iterator;
+	cache	:	ARRAY	[0..1000]	OF	DINT;
+	count	: DINT	:=0;
+	I	:	DINT;
+	step	:	BOOL;
+	
+	// IO operator
+	io_enb	:	BOOL	:=	TRUE;
+	starter	:	DigitalOutput;
+	input	:	DigitalInput;
+	output	:	DigitalOutput;
+	term	:	DigitalInput;
+	counter	:	UINT	:=	0;
+	c_limit	:	UINT 	:= 100;
+	s_limit	:	UINT	:=90;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// CPU manipulator
+
+
+IF cpu_enb THEN
+	// Run noToTest operations
+	FOR I:=0 TO noToTest BY 1 DO 
+		arr[I](increment:=I);
+		IF ASSIGN THEN
+			cache[I] := arr[i].out;
+		END_IF
+	END_FOR;
+END_IF
+
+IF io_enb THEN
+	IF counter < c_limit THEN
+		counter := counter + 1;
+	ELSIF counter >= c_limit THEN
+		counter := 0;
+	END_IF;
+	
+	IF counter > s_limit THEN
+		starter.out := 1;
+	ELSE
+		starter.out := 0;
+	END_IF
+	
+	IF input.in THEN
+		output.out := 1;
+	ELSE
+		output.out := 0;
+	END_IF
+END_IF
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="32" Count="0" />
+      <LineId Id="49" Count="31" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

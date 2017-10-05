@@ -1383,7 +1383,7 @@ External Setpoint Generation:
 			</Hides>
 		</DataType>
 	</DataTypes>
-	<Project ProjectGUID="{FACD9663-BF40-47ED-9C00-63D472D9A2B6}" TargetNetId="5.45.6.154.1.1" ShowHideConfigurations="#x106">
+	<Project ProjectGUID="{41E9EB0B-FB1F-4547-8EFA-6C32F0FB28B1}" TargetNetId="5.45.6.154.1.1" ShowHideConfigurations="#x106">
 		<System>
 			<Settings>
 				<Cpu BaseTime="500"/>
@@ -1642,7 +1642,7 @@ External Setpoint Generation:
 			</NC>
 		</Motion>
 		<Plc>
-			<Project File="LogicEffectOnIOReliability.xti"/>
+			<Project File="TCOscilloscpoeNetLoad.xti"/>
 		</Plc>
 		<Io>
 			<Device File="Device 1 (EtherCAT).xti" Id="1"/>

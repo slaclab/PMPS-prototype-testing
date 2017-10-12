@@ -44,7 +44,13 @@ Now using Tektronix 784D oscilloscope in place of Tektronix TDS 2024. Measurment
 Unchanged
 
 ### Results
-mean = 100.1us delay, st. dev = 20 ns, min = 99.6us, max = 100.1us. Mean can vary to 99.9us and std to 30ns. 
+
+Measurement | Result
+:--------: | ------:
+mean | 100.0+/-.1us
+st. dev | 25+/-5us
+min. | 99.6us
+max. | 100.1us
 
 ### Discussion
 Min and max indicate that the beckhoff is not taking additional/fewer cycles to complete computation. Cycle ount appears to be reliable. Cycle timing has very minor std. dev. of 20ns and mean very near advertised 100us. 
@@ -61,7 +67,13 @@ Measure using Tektronix 784D oscilloscope. Mean and standard dev. taken over 512
 Unchanged
 
 ### Results
-mean = 100.4us delay, st. dev = 2.29 us, min = 85.9us, max = 119.4us.
+
+Measurement | Result
+:--------: | -------------:
+mean | 100.4us
+st. dev | 2.29us
+min. | 85.9us
+max. | 119.4us
 
 ### Discussion
 Min and max indicate that the beckhoff is not taking additional/fewer cycles to complete computation. Cycle ount appears to be reliable.

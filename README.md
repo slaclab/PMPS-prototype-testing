@@ -1,16 +1,18 @@
-# PMPS-prototype-testing
-Repository for performance tests on beckhoff systems. Tests are intended to provide information about the limits and response rates of the beckhoff systems under various loads.
+# PMPS Prototype Tests
+L2S-I's PMPS system must be able to respond rapidly to a variety of complex states and inputs. In order to design a system that meets these high demands,s We will need accurate knowledge of our current hardware's performance to determine it's suitability for L2S-I.
 
-## NOTE:
-Some unused test directories in the main folder will be removed in the near future. 
+To investigate, we will run tests on prototypes of the future hardware to measure it's performance under the load we expect it to endure. This repository collects the source code for the experiments. The folders in the main directory are each devoted to a single experiment. They contain the source code required to perform the experiment, documentation of the experiment and notes.
+
+Thus far, the experiments focus on Beckhoff components, development with the TwinCAT 3 development environment, and Renishaw BISS-C Encoders. 
 
 ## Repository organization
-Individual tests are sectioned off into separate directories. Each contains the TwinCAT project(s) required for running the necessary tests as well as a README.md detailing test usage and results. 
+Individual tests are sectioned off into separate directories. Each contains the TwinCAT project(s) required for running the necessary tests as well as a README.md detailing test usage and results. Additional files may be included for documenting results
 
 ## Documenting results 
 Each test directory's README.md will have at minimum:
 ```markdown
-# IO_delay experiment
+
+# Experiment Title
 Short intro
 
 ## Goal/Question
@@ -22,19 +24,18 @@ bulleted list
 ## Test with date, name optional
 
 ### Intro (optional)
-Describe goal of specific test if necessary
+Describe goal of specific test or any variations in this test if necessary.
 
 ### Setup
-Non-beckhoff setup including measuring tools. 
+Setup including measuring tools. 
 
-#### Components in order, left to right
+#### PLC Components in order, left to right
 ordered list of beckhoff components
 
 ### Results
-Observed results
+Observed results, data
 
 ### Discussion
-Conclusion and notes.
+Analysis, conclusions, and notes.
 
 ```
-

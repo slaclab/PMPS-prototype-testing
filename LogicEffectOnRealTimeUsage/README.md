@@ -1,5 +1,5 @@
 # Investigation of Logic's Effect on Real Time Usage
-This project explores the process time required by various programmed tasks. This setup runs a set number of operations in a given execution cycle. Every couple of cycles, the number of executions increases to a limit then resets. The RealTimeusage plot appears similar to a saw-tooth wave showing the percentile usage at the minimum and maximum number of operations.
+This project explores the process time required by various programmed tasks. This setup runs a set number of operations in a given execution cycle. Every few of cycles, the number of executions increases to a limit then resets. The RealTimeusage plot appears similar to a saw-tooth wave showing the usage at the minimum and maximum number of operations.
 
 ## Goal
 Find the relationship between various software operations and execution time. Operations include comparisons and assignment. More operations may be included later. IO operations are being omitted for now
@@ -48,7 +48,7 @@ Observed using TC's online plots and the excess counter. The Beckhoff's real tim
 ### Results
 Images of the exact plots can be found in the results folder. Grid spacing is 1us in the y axis and 1s the x axis. Averages are taken over the last 5 minima/maxima. Note that the plots undergo some averaging before being shown to the user hence many plots in which the time limit is exceeded do depict the line surpassing the time limit. 
 
-| Operations | Average Minimum Time | Average Maximum Time | Exceed Counts
+| Operations | Average Maximum Time | Average Minimum Time | Exceed Counts
 | ----: | -----: | ----: | ----:
 | 800 | 16.7 | 4.6 | 0
 | 900 | 18.4 | 4.4 | 0
@@ -65,4 +65,4 @@ Images of the exact plots can be found in the results folder. Grid spacing is 1u
 
 
 ### Discussion
-The plots indicate a linear relationship between number of logic operations and real time usage indicating that the compile options we used don't feature any form of optimization for repetitive logic tasks. The number of exceed counts is not linear. Fewer than 1000 operations, excluding any IO appear safe. Compare these results with that of the [study on logic's effect on IO reliablity](https://github.com/slaclab/PMPS-prototype-testing/tree/master/LogicEffectOnIOReliability#results-1). Although the sample time for the study is different, there are proportionally far more exceed counts per duration on a study of even fewer operations. This suggests that more IO will limit the amount of logic we are allowed per high speed cycle while maintaining high reliability. Although not included in the results plots, shape of the plots for the 2000 operation sample may warrent further investigation.
+The plots indicate a linear relationship between number of logic operations and real time usage indicating that the compile options we used don't feature any form of optimization for repetitive logic tasks. The time to complete zero tasks does not change with the maximum number of tasks. The number of exceed counts is not linear. Fewer than 1000 operations, excluding any IO appear safe. Compare these results with that of the [study on logic's effect on IO reliablity](https://github.com/slaclab/PMPS-prototype-testing/tree/master/LogicEffectOnIOReliability#results-1). Although the sample time for the study is different, there are proportionally far more exceed counts per duration on a study of even fewer operations. This suggests that more IO will limit the amount of logic we are allowed per high speed cycle while maintaining high reliability. Although not included in the results plots, shape of the plots for the 2000 operation sample may warrent further investigation.

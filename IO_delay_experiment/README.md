@@ -61,7 +61,7 @@ Min and max indicate that the beckhoff is not taking additional/fewer cycles to 
 Rerun previous setup for full hour while tracking exceed counts. This is intended to detect instances where the beckhoff may use an additional RT cycle to complete computation and IO operations. Typically 2 cycles of 50 us each are used. This study is being rerun with better oscilloscope settings.
 
 ### Setup
-Measure using Tektronix 784D oscilloscope. Mean and standard dev. taken over 512 samples taken at the tail end of the 1 hour study. Minima and maxima taken from 1 hour worth of data. Data taken via a 'positive width' measurement on the subtraction of the output from the starter signal. Measurment is taken within vertical bars but the vertical bars are placed with ~2x the positive region's width on each side of the positive region. Input is set to Hi-res
+Measure using Tektronix 784D oscilloscope. Mean and standard dev. taken over 512 samples taken at the tail end of the 1 hour study. Minima and maxima taken from 1 hour worth of data. Data taken via a 'positive width' measurement on the subtraction of the output from the starter signal. Measurment is taken within vertical bars but the vertical bars are placed with ~2x the positive region's width on each side of the positive region. Input is set to Hi-res to prevent averaging of multiple input samples.
 
 #### Components in order, left to right
 Unchanged

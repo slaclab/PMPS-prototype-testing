@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("data_rates.csv",delimiter=",")
+data = pd.read_csv("network_data.csv",delimiter=",")
 
 #plt.clf()
 fig, ax = plt.subplots(2, 1, sharex='col')

@@ -58,7 +58,7 @@ Min and max indicate that the beckhoff is not taking additional/fewer cycles to 
 ## Rerun of test on 10-3-17
 
 ### Intro
-Rerun previous setup for full hour while tracking exceed counts. This is intended to detect instances where the beckhoff may use an additional RT cycle to complete computation and IO operations. Typically 2 cycles of 50 us each are used. 
+Rerun previous setup for full hour while tracking exceed counts. This is intended to detect instances where the beckhoff may use an additional RT cycle to complete computation and IO operations. Typically 2 cycles of 50 us each are used. This study is being rerun with better oscilloscope settings.
 
 ### Setup
 Measure using Tektronix 784D oscilloscope. Mean and standard dev. taken over 512 samples taken at the tail end of the 1 hour study. Minima and maxima taken from 1 hour worth of data. Data taken via a 'positive width' measurement on the subtraction of the output from the starter signal. Measurment is taken within vertical bars but the vertical bars are placed with ~2x the positive region's width on each side of the positive region. Input is set to Hi-res
@@ -74,7 +74,8 @@ mean | 100.4us
 st. dev | 2.29us
 min. | 85.9us
 max. | 119.4us
+exceeds | 0
 
 ### Discussion
-Min and max indicate that the beckhoff is not taking additional/fewer cycles to complete computation. Cycle ount appears to be reliable.
+Min and max indicate that the beckhoff is not taking additional/fewer cycles to complete computation. Over the course of the hour, the delay between input and output never varied lower than 50us or higher than 150us strongly indicating that every single cycle over the course of the hour only took two real time cycles to complete. This means that with minimial computations, the Beckhoff's IO response time is highly reliable. 
 

@@ -9,7 +9,7 @@ Find the relationship between various software operations and exetuaion time. Op
 
 ## Preliminary Test on 9-28-17
 ### setup
-Observed using TC's Real-Time's RealtimeUsage, the Task's Online plots and the excess counter. 
+Observed using TC's Real-Time's RealtimeUsage, the Task's Online plots and the excess counter. The Beckhoff's real time cycles operated at 20kHz.
 
 #### Components in order, left to right
 0. CX2020
@@ -22,9 +22,10 @@ Observed using TC's Real-Time's RealtimeUsage, the Task's Online plots and the e
 
 
 ### Results
-Operation time appears to scale linearly with number of mathematical operations. Sawtooth pattern clearly visible. 1000 operations reliably produced no excess counts. At roughly 1700 and greater operations, excesses were numerous and reliable. Relationship appears linear. Odd geometry of plots noticed in Real Time Usage and plcTask plots during and around excesses. 
+Operation time appears proportional with number of mathematical operations. Sawtooth pattern clearly visible. 1000 operations reliably produced no excess counts. At roughly 1700 and greater operations, excesses were numerous and reliable. Relationship appears linear. Odd geometry of plots noticed in Real Time Usage and plcTask plots during and around excesses. 
 
 ### Discussion
+The plots indicate a linear relationship between number of logic operations and real time usage indicating that the compile options we used don't feature any form of optimization for repetitive logic tasks. The limits of the logic we can perform should be investigated further. 
 
 
 

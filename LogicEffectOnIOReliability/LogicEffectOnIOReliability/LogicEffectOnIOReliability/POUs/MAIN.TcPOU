@@ -6,7 +6,7 @@ VAR
 	// CPU Manipulator
 	itr_enb	:	BOOL	:=	TRUE;
 	cpu_enb	:	BOOL	:=	TRUE;
-	ulimit	:	DINT	:=	1000;
+	ulimit	:	DINT	:=	500;
 	delay	:	DINT	:=	50;
 	assign	:	BOOL	:=	FALSE;
 	(**********************)
@@ -25,7 +25,10 @@ VAR
 	term	:	DigitalInput;
 	counter	:	UINT	:=	0;
 	c_limit	:	UINT 	:= 100;
-	s_limit	:	UINT	:=90;
+	s_limit	:	UINT	:= 90;
+	
+	// Watchdog-tripping infinite loop
+	wd_enb	:	BOOL	:=	FALSE;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -78,6 +81,9 @@ IF io_enb THEN
 	END_IF
 END_IF
 
+WHILE wd_enb DO
+	arr[97](increment:=1);
+END_WHILE
 ]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
@@ -92,8 +98,8 @@ END_IF
       <LineId Id="58" Count="1" />
       <LineId Id="61" Count="0" />
       <LineId Id="81" Count="16" />
+      <LineId Id="124" Count="3" />
       <LineId Id="63" Count="0" />
-      <LineId Id="60" Count="0" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>

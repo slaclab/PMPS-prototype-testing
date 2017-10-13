@@ -46,7 +46,8 @@ Qty. Variables Monitored | Network traffic (MBPS+/-1)  | CPU time (us+/15) | Tot
 
 
 ### Discussion
-![Network/Beckhoff load plots](https://raw.githubusercontent.com/slaclab/PMPS-prototype-testing/master/TCOscilloscopeNetLoad/netload_plots.png)
+
+![Network/Beckhoff load plots](https://raw.githubusercontent.com/slaclab/PMPS-prototype-testing/master/TCOscilloscopeNetLoad/network_results.png)
 
 |  | Cost per variable | Flat cost
 -- | ----------------- | ---------

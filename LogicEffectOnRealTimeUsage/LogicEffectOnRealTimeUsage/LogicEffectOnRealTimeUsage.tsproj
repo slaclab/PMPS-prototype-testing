@@ -1387,6 +1387,7 @@ External Setpoint Generation:
 		<System>
 			<Settings>
 				<Cpu BaseTime="500"/>
+				<IoIdleTask CycleTime="20000"/>
 			</Settings>
 			<Tasks>
 				<Task Id="2" Priority="20" CycleTime="500" AmsPort="350">
@@ -1396,7 +1397,7 @@ External Setpoint Generation:
 		</System>
 		<Motion>
 			<NC>
-				<SafTask Disabled="true" Priority="4" CycleTime="20000" AmsPort="501" IoAtBegin="true">
+				<SafTask Disabled="true" Priority="4" CycleTime="30000" AmsPort="501" IoAtBegin="true">
 					<Name>NC-Task 1 SAF</Name>
 					<Vars VarGrpType="1" InsertType="1">
 						<Name>Inputs</Name>
@@ -1408,7 +1409,7 @@ External Setpoint Generation:
 						<Name>Image</Name>
 					</Image>
 				</SafTask>
-				<SvbTask Priority="8" CycleTime="100000" AmsPort="511">
+				<SvbTask Priority="8" CycleTime="110000" AmsPort="511">
 					<Name>NC-Task 1 SVB</Name>
 				</SvbTask>
 				<Axis CreateSymbols="true" AxisType="1" Id="1">
